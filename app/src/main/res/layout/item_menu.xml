@@ -3,7 +3,6 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     app:cardCornerRadius="16dp"
     android:layout_marginTop="4dp">
 
@@ -11,7 +10,6 @@
         android:id="@+id/imageButtonHobbie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:background="@drawable/ic_launcher_background"
-        />
+        android:background="@mipmap/imagen_libro"/>
 
 </androidx.cardview.widget.CardView>
