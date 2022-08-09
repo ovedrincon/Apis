@@ -12,9 +12,11 @@ import java.util.List;
 public class AdapterMenu extends RecyclerView.Adapter<ViewHolder> {
 
     private List<Integer> itemList;
+    private OnItemCLickMenuList listener;
 
-    public AdapterMenu(List<Integer> itemList) {
+    public AdapterMenu(List<Integer> itemList, OnItemCLickMenuList listener) {
         this.itemList = itemList;
+        this.listener = listener;
     }
 
     @NonNull
@@ -23,6 +25,10 @@ public class AdapterMenu extends RecyclerView.Adapter<ViewHolder> {
 
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu, parent, false);
         ViewHolder holder = new ViewHolder(layoutView);
+
+
+        layoutView.findViewById(R.id.imageButtonHobbie).setOnClickListener(v -> listener.onClick(itemList.get(holder.getAdapterPosition())));
+
         return holder;
     }
 
